@@ -125,6 +125,19 @@ For more on CRON expressions, refer to the Azure Functions timer trigger documen
 
 ## Notes
 
+Some project files were originally stored in a local OneDrive-synced directory (such as (like `.vscode/extensions.json` or `requirements.txt`). Due to losing access to the associated OneDrive account, certain files (e.g., `.vscode/`, `.venv/`, and potentially other system-managed files) became locked and inaccessible.
+
+As a result:
+- These files could not be committed to Git
+- You may notice missing configuration or environment folders
+- The project itself is still functional — core source code and logic are unaffected
+
+### Recommendation
+If you clone or fork this repo:
+- Use your own Python virtual environment (`python -m venv .venv`)
+- Install dependencies manually if needed
+- Configure your editor as needed (e.g., VS Code settings)
+
 The API URL is currently hardcoded to fetch data for MSFT:
 
 bash
